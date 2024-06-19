@@ -1,0 +1,31 @@
+body, html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.container {
+max-width: 500px;
+
+}
+
+.row {
+    display: flex;
+}
+
+.box {
+    background-color: red;
+    flex:auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.white {
+    background-color: white;
+
+}
+
+.red {
+    background-color: red;
+}
