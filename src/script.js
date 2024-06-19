@@ -1,28 +1,26 @@
 let container = document.querySelector(".container");
 container.addEventListener("mouseover", (event) => {
     let target = event.target;
-    target.classList.add("white"); // can use toggle() to have on/off func
+    let newColor = random_rgba();
+    target.style.backgroundColor = newColor; 
 });
 
 container.addEventListener("mouseout", (event) => {
     target = event.target;
-    //target.classList.toggle("red");
 });
 
 let button = document.querySelector("button");
 button.addEventListener("click", () => {
-    console.log("button clicked");
     let size = prompt("What size grid would you like?")
     destroyGrid();
     generateGrid(size);
 
 });
-console.log(container)
-console.log("running...")
 
 function generateGrid(size) {
     if (size > 100) {
         alert("tooooooo big");
+        generateGrid(16);
         return;
     }
     for (let i = 0; i < size; i++) {
@@ -33,10 +31,7 @@ function generateGrid(size) {
             let div = document.createElement("div");
             div.classList.toggle("box");
             div.classList.toggle(`${i}${j}`);
-    
-            // div.textContent = i;
-            row.appendChild(div);
-            console.log(div)
+                row.appendChild(div);
         }
     }
     return;
@@ -45,6 +40,11 @@ function generateGrid(size) {
 function destroyGrid() {
     document.querySelector(".container").innerHTML = '';
     return;
+}
+
+function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
 }
 
 generateGrid(32);

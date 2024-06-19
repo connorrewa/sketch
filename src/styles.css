@@ -10,6 +10,11 @@ html {
 
 }
 
+h1 {
+    font-size: 5vh;
+    margin-bottom: 5vh;
+    color: darkslategray
+}
 .container {
     max-height: 50vh;
     max-width: 50vh;
@@ -20,12 +25,13 @@ html {
 }
 
 button {
-    margin-top: 10vh;
     padding: 18px 28px;
     font-size: 24px;
     border-radius: 18px;
-    margin-bottom: 10vh;
-    background-color: lightblue;
+    border: 2px solid gray;
+    background-color: rgb(55, 190, 235);
+    margin-bottom: 5vh;
+    color: black;
 }
 
 button:hover {
@@ -46,7 +52,7 @@ button:hover {
 .box {
     background-color: #aae0e0;
     flex: auto;
-    border: 1px solid black;
+    border: 0.5px solid gray;
 }
 
 .white {
