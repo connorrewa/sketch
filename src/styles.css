@@ -1,24 +1,47 @@
-body, html {
+body,
+html {
+    background-color: darkgrey;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .container {
-max-width: 500px;
+    max-width: 500px;
+    max-height: 500px;
 
+}
+
+button {
+    margin-top: 10vh;
+    padding: 18px 28px;
+    font-size: 24px;
+    border-radius: 18px;
+    margin-bottom: 10vh;
+    background-color: lightblue;
+}
+
+button:hover {
+    background-color: #ade1e6;
 }
 
 .row {
     display: flex;
+    max-width: 500px;
+
 }
 
 .box {
-    background-color: red;
-    flex:auto;
+    background-color: #aae0e0;
+    flex: auto;
     border: 1px solid black;
     text-align: center;
+    min-width: 10px;
+    min-height: 10px;
 }
 
 .white {
